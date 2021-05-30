@@ -49,7 +49,7 @@ export default function MahjongClosedFlash() {
   const [tileNumRange, setTileNumRange] = useState(tileNumRangeMaster.easy);
   const [answer, setAnswer] = useState(machi(defaultTileNums.join('')));
   const [myAnswer, setMyAnswer] = useState<string[]>([]);
-  const [showAnswer, setShowAnswer] = useState(true);
+  const [showAnswer, setShowAnswer] = useState(false);
 
   const reload = (length?: number, range?: string) => {
     setShowAnswer(false);
