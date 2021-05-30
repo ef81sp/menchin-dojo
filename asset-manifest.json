@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/menchin-dojo/static/css/main.e5e9077b.chunk.css",
-    "main.js": "/menchin-dojo/static/js/main.1c52f052.chunk.js",
-    "main.js.map": "/menchin-dojo/static/js/main.1c52f052.chunk.js.map",
+    "main.js": "/menchin-dojo/static/js/main.bf5ced3b.chunk.js",
+    "main.js.map": "/menchin-dojo/static/js/main.bf5ced3b.chunk.js.map",
     "runtime-main.js": "/menchin-dojo/static/js/runtime-main.a92d3b2f.js",
     "runtime-main.js.map": "/menchin-dojo/static/js/runtime-main.a92d3b2f.js.map",
     "static/js/2.093e98ba.chunk.js": "/menchin-dojo/static/js/2.093e98ba.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a92d3b2f.js",
     "static/js/2.093e98ba.chunk.js",
     "static/css/main.e5e9077b.chunk.css",
-    "static/js/main.1c52f052.chunk.js"
+    "static/js/main.bf5ced3b.chunk.js"
   ]
 }
