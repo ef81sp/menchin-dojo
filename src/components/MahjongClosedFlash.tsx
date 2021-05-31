@@ -136,17 +136,17 @@ export default function MahjongClosedFlash() {
               <FormControlLabel
                 value={tileNumRangeMaster.easy}
                 control={<Radio />}
-                label="1 - 9 (easy)"
+                label="1 - 9"
               />
               <FormControlLabel
                 value={tileNumRangeMaster.normal}
                 control={<Radio />}
-                label="2 - 8 (normal)"
+                label="2 - 8"
               />
               <FormControlLabel
                 value={tileNumRangeMaster.hard}
                 control={<Radio />}
-                label="3 - 7 (hard)"
+                label="3 - 7"
               />
             </RadioGroup>
           </div>
