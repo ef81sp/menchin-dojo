@@ -47,20 +47,25 @@ export default function MahjongClosedFlash() {
   const [tilesLength, setTilesLength] = useState(13);
   const [isSort, setIsSort] = useState(true);
   const [tileNumRange, setTileNumRange] = useState(tileNumRangeMaster.easy);
+  const [waitLength, setWaitLength] = useState(1);
   const [answer, setAnswer] = useState(machi(defaultTileNums.join('')));
   const [myAnswer, setMyAnswer] = useState<string[]>([]);
   const [showAnswer, setShowAnswer] = useState(false);
 
-  const reload = (length?: number, range?: string) => {
+  const reload = (
+    _tileLength?: number,
+    range?: string,
+    _waitLength?: number
+  ) => {
     setShowAnswer(false);
     let tileNums = getTileNums(
-      length || tilesLength,
+      _tileLength || tilesLength,
       range || tileNumRange
     ).sort();
     let _answer = machi(tileNums.join(''));
-    while (!_answer.length) {
+    while (!(_answer.length >= (_waitLength || waitLength))) {
       tileNums = getTileNums(
-        length || tilesLength,
+        _tileLength || tilesLength,
         range || tileNumRange
       ).sort();
       _answer = machi(tileNums.join(''));
@@ -73,12 +78,7 @@ export default function MahjongClosedFlash() {
     <div>
       <div className={classes.tiles}>
         {(isSort ? [...tileNums].sort() : tileNums).map((n, i) => (
-          <MahjongTile
-            num={n}
-            suit="s"
-            key={i}
-            width={getTileWidth(13)}
-          />
+          <MahjongTile num={n} suit="s" key={i} width={getTileWidth(13)} />
         ))}
       </div>
 
@@ -147,6 +147,35 @@ export default function MahjongClosedFlash() {
                 value={tileNumRangeMaster.hard}
                 control={<Radio />}
                 label="3 - 7"
+              />
+            </RadioGroup>
+          </div>
+          <div>
+            <FormLabel component="legend">待ちの数</FormLabel>
+            <RadioGroup
+              aria-label="タンヤオ"
+              value={waitLength}
+              onChange={(e, v) => {
+                const l = parseInt(v);
+                setWaitLength(l);
+                reload(undefined, undefined, l);
+              }}
+            >
+              <FormControlLabel
+                value={0}
+                control={<Radio />}
+                label="0〜 (ノーテン含む)"
+                disabled
+              />
+              <FormControlLabel
+                value={1}
+                control={<Radio />}
+                label="1〜 (テンパイ)"
+              />
+              <FormControlLabel
+                value={3}
+                control={<Radio />}
+                label="3〜 (多面待ち)"
               />
             </RadioGroup>
           </div>
