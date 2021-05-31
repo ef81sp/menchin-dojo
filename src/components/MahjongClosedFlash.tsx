@@ -77,7 +77,7 @@ export default function MahjongClosedFlash() {
             num={n}
             suit="s"
             key={i}
-            width={getTileWidth(tilesLength)}
+            width={getTileWidth(13)}
           />
         ))}
       </div>
