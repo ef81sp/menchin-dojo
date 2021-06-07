@@ -192,6 +192,7 @@ export default function MahjongClosedFlash() {
         >
           判定
         </Button>
+        <p style={{ fontSize: 'x-small' }}>※4枚使いの5枚目も正答に含まれます</p>
       </div>
       {showAnswer && (
         <div>
