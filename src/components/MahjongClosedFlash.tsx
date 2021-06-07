@@ -84,7 +84,7 @@ export default function MahjongClosedFlash() {
 
       <div className={classes.controler}>
         <Button variant="contained" color="primary" onClick={() => reload()}>
-          リロード
+          別の問題
         </Button>
 
         <Grid className={classes.controler} container spacing={5}>
