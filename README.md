@@ -6,4 +6,4 @@ https://ef81sp.github.io/menchin-dojo/
 ## 備考
 スマホで見てません。そのうちやりたい。
 ## 連絡
-[@p_craft](https://twitter.com/p_craft)
+[@rik](https://twitter.com/rik31415926)
